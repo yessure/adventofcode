@@ -1,4 +1,4 @@
- <?php
+<?php
 $raw_input = trim(file_get_contents('input'));
 $input = explode(PHP_EOL, $raw_input);
  
