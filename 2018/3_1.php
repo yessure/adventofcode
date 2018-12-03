@@ -1,5 +1,5 @@
 <?php
-$raw_input = trim(file_get_contents('input'));
+$raw_input = trim(file_get_contents('input.txt'));
 $input = explode(PHP_EOL, $raw_input);
  
 $result = 0;
