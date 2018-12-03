@@ -8,16 +8,16 @@ $array = array();
 $input[0] = explode("\n", $input[0]);
 foreach($input as &$pline) {
     foreach($pline as &$element) {
-    $element = explode(' ', $element);
+        $element = explode(' ', $element);
     }
 }
  
 foreach($input as $a) {
     foreach($a as $b) {
-        $coordinates = explode(',',$b[2]);
-        $coordinates[1]=rtrim($coordinates[1],':');
-        $area = explode('x',$b[3]);
-        for($j = 1; $j <= $area[1];$j++) {
+        $coordinates = explode(',', $b[2]);
+        $coordinates[1] = rtrim($coordinates[1], ':');
+        $area = explode('x', $b[3]);
+        for($j = 1; $j <= $area[1]; $j++) {
             for($i = 1; $i <= $area[0]; $i++) {
                 if(isset($array[$coordinates[0] + $i][$coordinates[1] + $j])) {
                     $array[$coordinates[0] + $i][$coordinates[1] + $j] = 'X';
