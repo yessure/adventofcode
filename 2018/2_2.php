@@ -16,17 +16,17 @@ foreach($input as &$line) {
 
 foreach($input as &$pline) {
 	foreach($pline as &$element) {
-			foreach($input as $kline){
-				foreach($kline as $element2){
-					if(count($x = array_diff_assoc($element,$element2)) == 1 ){
-						foreach($element2 as $key=>$char){
-							if(!isset($x[$key])){
-								echo $char;
-							}
+		foreach($input as $kline){
+			foreach($kline as $element2){
+				if(count($x = array_diff_assoc($element,$element2)) == 1 ){
+					foreach($element2 as $key=>$char){
+						if(!isset($x[$key])){
+							echo $char;
 						}
-						die();
 					}
+					die();
 				}
 			}
+		}
 	}
 }
